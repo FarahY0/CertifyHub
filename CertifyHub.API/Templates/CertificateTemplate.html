@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Whisper&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Slabo+27px&family=Whisper&display=swap" rel="stylesheet">
+
+    <style>
+
+        @page {
+            size: 9.5in 7.5in;
+            margin: 0mm;
+            background-color: #F4EAE0;
+        }
+
+        body {
+            background-color: #F4EAE0;
+            text-align: center;
+        }
+
+        .container {
+            font-family: 'Alegreya', serif;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        h4 {
+            font-size: 32px;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-style: italic;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .date {
+            float: left;
+            margin-left: 100px;
+        }
+
+        .signature {
+            float: right;
+            margin-right: 100px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-size: cover;
+        }
+
+        .scan {
+            margin-bottom: 5px; /* Space above the QR code text */
+        }
+
+        .qr-container {
+            position: absolute; /* Position the container absolutely within its relative parent */
+            top: 87%; /* Start at the vertical center of the parent */
+            right: 80px; /* Distance from the right edge of the parent */
+            transform: translateY(-50%); /* Adjust the vertical position to truly center it */
+            text-align: right; /* Align text to the right */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack children vertically */
+            align-items: flex-end; /* Align children to the right (end) */
+        }
+
+        .qr-code {
+            height: 100px;
+            width: 100px;
+            margin-top: 10px; /* Space between text and QR code */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Certificate of Achievment</h1>
+
+        <h2>CertifyHub LMS</h2>
+
+        <h3>{{CourseName}}</h3>
+
+        <h4>Certificate of Completion</h4>
+
+        <p>Our company is pleased to be able to award this certificate to</p>
+
+        <p class="name">{{FIRSTNAME}} {{LASTNAME}}</p>
+
+        <p>Upon the successful completion of your {{CourseName}}, module, level or grade!</p>
+
+        <p>with a grade of<span style="font-weight:bold; font-size: 25px; margin-left: 10px;">{{TOTAL_GRADE_SUM}}</span></p>
+
+        <p class="date" style="font-size: 24px;">{{DATE}}</p>
+
+        <p class="signature">CertifyHub</p>
+
+        <div class="logo"></div>
+
+        <!-- Add a new div around the paragraph and the QR code -->
+        <div class="qr-container">
+            <p class="scan">
+                Scan the CV's QR code for more details:
+            </p>
+            <img class="qr-code" src="{{QRCODEURL}}" alt="QR Code">
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
